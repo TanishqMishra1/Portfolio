@@ -19,7 +19,7 @@ const RecentProjects = () => {
             key={item.id}
           >
             <PinContainer
-              title="/ui.aceternity.com"
+              title={item.link}
               href="https://twitter.com/mannupaaji"
             >
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
@@ -36,9 +36,16 @@ const RecentProjects = () => {
                 />
               </div>
 
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                {item.title}
-              </h1>
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="no-underline text-current"
+              >
+                <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+                  {item.title}
+                </h1>
+              </a>
 
               <p
                 className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
@@ -60,22 +67,22 @@ const RecentProjects = () => {
                         transform: `translateX(-${5 * index + 2}px)`,
                       }}
                     >
-                      <img src={icon} alt="icon5" className="p-2" />
+                      <img src={icon} alt="icon" className="p-2" />
                     </div>
                   ))}
                 </div>
 
                 <div className="flex justify-center items-center">
                   <a
-                    href="https://www.linkedin.com/in/tanishq-mishra-004a921a5/"
+                    href=""
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex justify-center items-center no-underline text-current"
                   >
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Site
-                  </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
+                    <p className="flex lg:text-xl md:text-xs text-sm text-purple">
+                      Check Live Site
+                    </p>
+                    <FaLocationArrow className="ms-3" color="#CBACF9" />
                   </a>
                 </div>
               </div>
